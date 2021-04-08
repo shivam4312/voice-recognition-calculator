@@ -120,7 +120,7 @@ input:nth-child(23){
 	height: 48px;
 	width: 48px;
 	float: right;
-	background-image: url(mic.png);
+	background-image: url("https://shivam4312.github.io/voice-recognition-calculator/mic.png");
 	background-size: 100% 100%;
 	cursor: pointer;
 	border-radius: 50%;
