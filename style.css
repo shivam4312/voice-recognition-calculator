@@ -1,0 +1,183 @@
+body{
+	font-family: 'Open Sans',sans-serif;
+	background-color: rgb(214, 214,214);
+}
+.title{
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+	font-size: 30px;
+	font-weight: 800;
+	user-select: none;
+}
+
+#container{
+    width: 300px;
+    height: 538px;
+    margin: 40px auto;
+	user-select: none;
+    border-radius: 10px;
+    background: rgb(214,214,214);
+    box-shadow: 5px 5px 10px #b6a9a9, -5px -5px 10px #ffffff;
+}
+#calculator{
+	width: 270px;
+    margin: 20px auto;
+}
+.result{
+	height: 90px;
+}
+#history-value{
+	border: none;
+    outline: none;
+	text-align: right;
+	width: 225px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 20px;
+	color: #919191;
+	background: transparent;
+}
+#output-value{
+    border: none;
+    outline: none;
+    text-align: right;
+    font-weight: 600px;
+    width: 260px;
+    padding-top: 10px;
+	margin:0px;
+	font-size: 30px;
+    background: transparent;
+}
+
+.operator, .number{
+    margin: 20px 0 0 6.5px;
+    width: 52px;
+    height: 52px;
+    border: none;
+    outline: none;
+	text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    background: rgb(214, 214,214);
+    box-shadow: 5px 5px 10px #b6acac, -5px -5px 10px #faf4f4;
+    display: inline-block;
+}
+p{
+	width: 240px;
+}
+.zero{
+	width: 118px;
+}
+.equal{
+	width: 118px;
+}
+.clearButton{
+    background: red;
+    color: white;
+}
+
+.operator:active{
+    box-shadow: inset 1px 1px 2px #babeec, inset -1px -1px 2px #ffffff;
+}
+.number:active{
+    box-shadow: inset 1px 1px 2px #babeec, inset -1px -1px 2px #ffffff;
+}
+
+input:nth-child(3){
+    background: rgba(16, 56, 231, 0.986);
+    color: white;
+}
+input:nth-child(4){
+    background: black;
+    color: white;
+}
+input:nth-child(5){
+    background: black;
+    color: white;
+}
+input:nth-child(10){
+    background: black;
+    color: white;
+}
+input:nth-child(15){
+    background: black;
+    color: white;
+}
+input:nth-child(20){
+    background: black;
+    color: white;
+}
+input:nth-child(23){
+    background: black;
+    color: white;
+}
+
+
+#microphone{
+	height: 48px;
+	width: 48px;
+	float: right;
+	background-image: url(mic.png);
+	background-size: 100% 100%;
+	cursor: pointer;
+	border-radius: 50%;
+	margin: 20px;
+	margin-top: 15px;
+    margin-right: 110px;
+}
+
+.record{	
+	animation: microphone-animation 1.5s infinite;
+}
+@Keyframes microphone-animation{
+	0%{
+		transform: scale(0.9);
+	}
+	70%{
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0,148,255,0.4);
+		
+	}
+	100%{
+		transform: scale(0.9);
+		box-shadow: 0 0 0 0 rgba(0,148,255,0);
+	}
+}
+.tooltip{
+	width: 200px;
+	font-size: 10px;
+	position: absolute;
+	background-color: #cccccc;
+	color: #636363;
+	padding: 10px;
+	transform: translateX(150px);
+	border-radius: 5px;
+	visibility: hidden;
+}
+.tooltip::before{
+	content: '';
+	position: absolute;
+	border-width: 5px;
+	border-style: solid;
+	border-color:transparent #cccccc transparent transparent;
+	left: 0;
+    transform: translateY(20px);
+	margin-left: -10px;
+}
+#output-microphone:hover .tooltip{
+	visibility: visible;
+}
+
+@media(max-width: 690px) {
+	.title{
+		display: flex;
+		justify-content: center;
+		padding-top: 5px;
+		font-size: 20px;
+		font-weight: 800;
+		user-select: none;
+	}
+}

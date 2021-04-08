@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+	<title>Smart calculator</title>
+</head>
+
+<body>
+	<div class="title">Voice Recognition Calculator</div>
+	<div id="container">
+		<div id="calculator">
+			<form id="keyboard">
+				<div class="result">
+					<p id="history-value"></p>
+					<p id="output-value">0</p>
+				</div>
+				<!-- <br> -->
+				<input class="operator clearButton" value="C" id="clear" readonly></input>
+				<input class="operator" value="CE" id="backspace" readonly></input>
+				<input class="operator" value="%" id="%" readonly></input>
+				<input class="operator" value="/" id="/" readonly></input>
+				<br>
+				<input class="number" value="7" id="7" readonly></input>
+				<input class="number" value="8" id="8" readonly></input>
+				<input class="number" value="9" id="9" readonly></input>
+				<input class="operator" value="x" id="*" readonly></input>
+				<br>
+				<input class="number" value="4" id="4" readonly></input>
+				<input class="number" value="5" id="5" readonly></input>
+				<input class="number" value="6" id="6" readonly></input>
+				<input class="operator" value="-" id="-" readonly></input>
+				<br>
+				<input class="number" value="1" id="1" readonly></input>
+				<input class="number" value="2" id="2" readonly></input>
+				<input class="number" value="3" id="3" readonly></input>
+				<input class="operator" value="+" id="+" readonly></input>
+				<br>
+				<input class="number zero" value="0" id="0" readonly></input>
+				<input class="operator equal" value="=" id="=" readonly></input>
+				<div id="output-microphone">
+					<span id="microphone">
+					</span>
+					<span class="tooltip">Operations are plus, minus, multiply, divide &amp; reminder
+						The user input format is number + operation + number<br><br>
+						Eg: 2 multiply 5 will be 2 &times 5
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
